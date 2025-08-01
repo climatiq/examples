@@ -27,9 +27,9 @@ session.mount("http://", adapter)
 # Alternatively, you can change the capitalized column names in the code below to match your existing column header names.
 input_df = pd.read_excel(file_path)
 input_df = input_df.rename(columns={
-    'TEXT': 'text',
+    'TEXT': 'text', # Required field
     'MODEL': 'model', # Optional, delete if not used
-    'UNIT_TYPE': 'unit_type', # Can be Weight, Spend, Volume or Number, one or multiple possible
+    'UNIT_TYPE': 'unit_type', # Optional, but can be Weight, Spend, Volume or Number, one or multiple possible
     'YEAR': 'year', # Optional, delete if not used
     'REGION': 'region', # Optional, delete if not used
     'REGION_FALLBACK': 'region_fallback', # Optional, delete if not used
